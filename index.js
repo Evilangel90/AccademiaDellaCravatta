@@ -49,7 +49,7 @@ passport.deserializeUser(User.deserializeUser());
 const secret = process.env.secret || "questononèunbelsegreto";
 ///////////////////////////// <---CONNETTERE DATABASE-------->///////////////////////
 const dbUrl = process.env.DatabaseURL || "mongodb://localhost:27017/AccademiaDellaCravatta";
-
+//nodemon --exec babel-node index
 mongoose.connect(dbUrl, {
     useCreateIndex: true,
     useNewUrlParser: true,
@@ -121,7 +121,7 @@ app.get("*", (req, res) => {
 //inserireLezioniNelCorso("Regalo Mindset")
 ///////////////////////////////////////////SERVER LISTEN //////////////////////////////
 app.listen(port, e => {
-    console.log("listening on Port 3000");
+    console.log(`listening on Port ${port}`);
     if (e) console.log(" Errore", e);
 })
 
