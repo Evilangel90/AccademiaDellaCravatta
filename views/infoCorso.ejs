@@ -1,0 +1,33 @@
+<%-include( "../Templates/header" )%>
+    <title>Shop</title>
+    <link rel="stylesheet" href="../Styles/infoCorso.css">
+    </head>
+
+    <body>
+        <%-include( "../Templates/navbar" )%>
+            <%-include( "../Templates/flash" )%>
+                <div class="container">
+                    <h1>
+                        <%=corso.titolo %>
+                    </h1>
+
+                    <div class="card" style="width: 18rem;">
+                        <img src="<%=corso.immagine %> " class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%=corso.titolo %>
+                            </h5>
+                            <p style="color: black;" class="card-text">
+                                Spiegazione di che viene detto nel corso ecc ecc ecc
+                                <%=corso.info %>
+                            </p>
+                            <form action="/pay" method="post">
+                                <input type="submit" value="Buy">
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+                <h6><a href="/corsi/shop">Torna ai corsi Acquistabili</a></h6>
+                </div>
+    </body>

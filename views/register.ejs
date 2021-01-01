@@ -1,0 +1,90 @@
+<%-include( "../Templates/header" )%>
+
+    <link rel="stylesheet" href="Styles/register.css">
+    <title>Registrati</title>
+    </head>
+
+    <body>
+
+        <%-include( "../Templates/flash" )%>
+            <script defer src="../Scripts/registerValidation.js">
+
+            </script>
+
+
+            <div class="accesso">
+                <form action="/register" method="POST" class="form indirizzo validated-form" id="register">
+                    <h1>Registrati</h1>
+                    <div>
+                        <label for="Nome">Nome</label>
+                        <input type="text" required placeholder="Nome" min="2" class="input" id="nome" name="nome"
+                            pattern="^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$">
+                        </input>
+                        <label for="cognome"> Cognome</label>
+                        <input type="text" required placeholder="Cognome" class="input" id="cognome" name="cognome"
+                            pattern="^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$">
+                        </input>
+                    </div>
+                    <div>
+                        <label for="telefono"> Tel.</label>
+                        <input type="tel"
+                            pattern="^(\((00|\+)39\)|(00|\+)39)?(38[890]|34[4-90]|36[680]|33[13-90]|32[89]|35[01]|37[019])(\s?\d{3}\s?\d{4}|\d{7})$"
+                            id="telefono" name="cellulare" class="input" placeholder="Cellulare" required>
+                        </input>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required placeholder="Email" class="input">
+                        </input>
+                    </div>
+                    <div>
+                        <label for="città">Città</label>
+                        <input type="text" required placeholder="Città" class="input" id="città" name="citta">
+                        </input>
+                        <label for="via">Indirizzo</label>
+                        <input type="text" required placeholder="Via" class="input" id="via" name="via">
+                        </input>
+                    </div>
+                    <div>
+                        <label for="provincia">Provincia</label>
+                        <input type="text" required placeholder="Provincia" class="input" id="provincia"
+                            name="provincia"></input>
+                        <label for="civico">Civ</label>
+                        <input type="text" required placeholder="Civ." class="input" id="civico" name="civico">
+                        </input>
+                        <label for="cap">Cap</label>
+                        <input type="text" required placeholder="CAP" class="input" id="cap" name="cap"
+                            pattern="^\d{5}$">
+
+                        </input>
+                    </div>
+                    <div>
+                        <label for=" username">Username</label>
+                        <input type="text" required placeholder="Username" class="input" id="username"
+                            name="username"></input>
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" placeholder="Password" required
+                            class="input"
+                            pattern="^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])[\w!@#$%^&*]{8,}"></input>
+                    </div>
+                    <div id="rigaPassword2">
+
+                        <label for="password2">Ripeti Password</label>
+
+                        <input type="password" id="password2" name="password2" placeholder="Password" required
+                            class="input"
+                            pattern="^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])[\w!@#$%^&*]{8,}"></input>
+
+                    </div>
+                    <div>
+                        <button id="btnRegister">Registrati</button>
+                    </div>
+                    <div id="error"></div>
+
+
+                    <h6> Hai già un account? </h6><a href="/login" id="loginLink">Fai il log In!</a>
+            </div>
+            </div>
+            </form>
+            </div>
+    </body>
+
+    </html>

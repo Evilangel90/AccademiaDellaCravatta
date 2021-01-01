@@ -1,0 +1,44 @@
+body{
+    background-image: url("../Immagini/sfondoMattoni.png");
+    background-size: cover;  
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+   margin: 0;
+   padding: 0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+h1{
+    margin-top: 2em;
+    color: white;
+}
+h5{
+    text-align: center;
+}
+#bottonePaypal{
+     width: 100%;  
+    display: flex;
+    justify-content: center;
+}
+#bottonePaypal div{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    
+}
+#bottonePaypal div a{
+    width: 100%;
+}
+.card{
+    margin-bottom: 1em;
+}
+a:hover{
+    text-decoration: none;
+}

@@ -1,0 +1,96 @@
+.contenitoreNav{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+#navBarMia{
+    display: flex;    
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    width: 100%;
+    background-color: rgba(255,255,255,0.5);
+}
+#iconaUtente{
+    margin-right: 20px;
+}
+#iconaUtente:hover{
+    color:rgb(19, 173, 160)
+}
+.selezionato{
+    color:rgb(19, 173, 160)
+}
+
+#navBarMia h2{
+    font-size: 30px;
+    font-weight: 600;
+    margin-left: 30px;
+}
+#navBarMia a, #accedi a{
+    text-decoration: none;
+    color: white;
+}
+#user{
+    display: flex;
+    align-items: center;
+}
+#accedi{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+#accedi a{
+    background-color: rgba(255,255,255,0.5);
+    min-width: 200px;
+    text-align: right;
+
+}
+#accedi a:hover{
+  
+color:rgb(19, 173, 160)
+}
+#nomeUtente{
+    margin-right: 25px;
+}
+
+.nascosto{
+    display: none;
+}
+
+
+@media screen and (min-width:1000px){
+  #navBarMia h2{
+    font-size: 40px;
+  }
+}
+@media screen and (max-width:680px){
+  
+    #navBarMia{
+    
+      text-align: center;
+      justify-content: space-between;
+    }
+    #navBarMia span{
+        display: none
+    };
+    #logo{
+        width: 90%;
+       margin-top: 10px;
+    }
+    #navBarMia h2{
+        font-size: 25px;
+        font-weight: 600;
+    }
+    #user{
+        margin-top: 0;
+        width: 10%;
+        justify-content: center;
+    }
+    #accedi{
+       align-items: flex-end;
+       position: relative;
+    }
+
+}

@@ -1,0 +1,236 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("/Immagini/sfondoMattoni.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    line-height: 1.2em;   
+    
+    }
+
+h1{
+    width: 100%;
+    margin-top: 1.5em;
+}
+h4:hover{
+    color: rgb(149, 233, 70);
+    cursor: pointer;
+}
+.contenitore{
+    width: 90%;   
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+.primaRiga div:hover{
+   opacity: 0.7;
+}
+
+.primaRiga{
+    margin-top: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-bottom: 10em; 
+    justify-content: space-between;
+    opacity: 0;
+    animation: mostraContenuto 5s;
+    animation-fill-mode: forwards;
+    }
+    @keyframes mostraContenuto{
+        0%{
+            opacity: 0.1;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+img{
+    width: 350px;
+    height: 200px;
+    
+}
+
+h6{
+    position: absolute;
+    transform:translate(-35px, 20px);
+}
+
+#servizi{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;   
+       opacity: 0;
+    animation: mostraContenuto 5s;
+    animation-fill-mode: forwards;
+    }
+    #servizi img{
+        width: 70%;
+        height: 60%;
+    }
+    
+.immagini{
+    display: flex;    
+    margin-bottom: 2em;
+    justify-content: center;
+    
+    
+}
+.immagini div{
+    width: 13%;
+    margin-right: 10px;
+    text-align: center;
+}
+
+
+.immagini div img{
+    width:80%;
+    height: 70%;     
+}
+/*        //////       MOBILE E ALTRI SCREEN SIZE    //////////////////////      /*/
+
+
+@media screen and (max-width:1200px){
+    .contenitore{
+        width: 80%;
+        
+    }
+    .primaRiga{
+        justify-content: center;    
+            margin-left: auto;
+            margin-left: auto;            
+    }
+    .primaRiga div{
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        border: 2px solid white;
+        border-radius: 25px;  
+        margin-top: 2em;
+        width: 80%;    
+        
+        justify-content: center;         
+    }
+    .primaRiga div img{
+        width: 80%;
+    }
+    #computer{
+        width:80%;
+    }
+    #chatAssistenza{
+        display: flex;
+        justify-content: center;
+        width: 50%;        
+    }
+    h6{
+        font-size: 30px;
+        margin-left: 50px;
+    }
+    .immagini{
+        display: flex;
+        flex-direction: column;
+        width: 80%; 
+        align-items: center;
+        height: 30%;
+          
+     }
+     .immagini div{
+        border: 2px solid white;
+        border-radius: 25px;  
+        width: 80%;
+         
+     }
+     h1{
+        text-align: center;
+     }
+     
+}
+
+@media screen and (max-width:800px)
+{
+    .contenitore{
+        width: 80%;
+        margin-left: auto;
+            margin-left: auto;
+    }
+    .primaRiga{
+        justify-content: center;    
+            margin-left: auto;
+            margin-left: auto;            
+    }
+    .primaRiga div{
+        margin-left: auto;
+        margin-right: auto;
+        border: 2px solid white;
+        border-radius: 25px;         
+
+    }
+    h1{
+        font-size: 25px;
+    }
+    #chatAssistenza{
+        display: flex;
+        justify-content: center;
+        width: 100%;        
+    }
+    .immagini{
+        display: flex;
+        flex-direction: column;
+        width: 80%; 
+        align-items: center;
+          
+     }
+     .immagini div{
+        border: 2px solid white;
+        border-radius: 25px;  
+         width: 80%;
+     }  
+    
+}
+
+@media screen and (max-width:500px)
+{
+    .contenitore{
+        width: 100%;
+        margin-left: auto;
+            margin-left: auto;
+    }
+    .primaRiga{
+        justify-content: center;    
+            margin-left: auto;
+            margin-left: auto;            
+    }
+    .primaRiga div{
+        margin-left: auto;
+        margin-right: auto;
+        border: 2px solid white;
+        border-radius: 25px;         
+
+    }
+    h1{
+        font-size: 25px;
+    }
+    #chatAssistenza{
+        display: flex;
+        justify-content: center;
+        width: 100%;        
+    }
+    .immagini{
+        display: flex;
+        flex-direction: column;
+        width: 100%; 
+        align-items: center;
+          
+     }
+     .immagini div{
+        border: 2px solid white;
+        border-radius: 25px;  
+         width: 100%;
+     }  
+     
+    
+}

@@ -1,0 +1,133 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background-image: url("../Immagini/sfondoMattoni.png");
+    background-size: cover;    
+   color: white;
+}
+    
+h1{
+    margin-bottom: 2em;
+}
+
+.contenitore{
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.riga{
+    display: flex;
+    width: 95%;
+    align-items: center;
+
+}
+.mensola h5{
+    width:10%;
+}
+.mensola{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;  
+    background-image: url("../Immagini/mensola.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-left: 2.2em;
+    padding-right: 2.2em;
+    padding-bottom: 7vw;
+    margin-left: auto;
+}
+.libri{
+    width: 12%;
+    transform: translate(1000px 150px); 
+    
+}
+.libri:hover{
+    opacity: 0.8;
+}
+.mensola img{
+    
+    width: 100%;
+    height: 100%;
+    
+}
+
+/* ////////////////////////////IMPOSTAZIONI SCHERMO ////////////////////*/
+@media screen and (max-width:1200px)
+{ .contenitore{
+    width: 90%;
+}
+    h1{
+       font-size: 55px;
+       margin-top: 2em;
+    }
+    h5{
+        font-size: 45px;
+    }
+    .mensola{
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-left: 0;
+        padding-right: 0;
+       
+
+    }
+   
+    .riga{
+        flex-direction: column;
+        width: 100%;
+        min-height: 100px;
+    }
+    .libri{
+        width: 15%;
+        margin-bottom: 6vh;
+        margin-right: 0.1em;
+    }
+}
+@media screen and (max-width:800px)
+{ 
+    .contenitore {
+
+    width: 100%;
+}
+   
+}
+
+@media screen and (max-width:680px){
+ h1{
+       font-size: 35px;
+    }
+    h5{
+        font-size: 28px;
+    }
+   
+}
+@media screen and (max-width:350px){
+    html{
+        min-width:320px;
+    }
+    h1{
+          font-size: 35px;
+       }
+       h5{
+           font-size: 28px;
+       }
+        .contenitore{
+        width: 100%;
+    }
+    .mensola{
+        margin-right: auto;
+        margin-left: auto;
+    }
+      
+   }

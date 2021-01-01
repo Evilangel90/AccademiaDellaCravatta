@@ -1,0 +1,182 @@
+
+
+/****************************************  *SILE GENERALE  ********************************** */
+    body{
+        background-image: url("../Immagini/sfondoMattoni.png");
+        background-size: cover;
+        color: white;
+        line-height: 1em;
+        width: 100%;
+        height: 100%;
+       
+    }
+   
+
+.accesso a{
+    color: rgb(19, 173, 160);
+    font-size: 15px;
+}
+  
+
+
+
+   .accesso{
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        margin-top: 6em;
+        background-image: url("../Immagini/sfondoFormRegistrazione.png");
+        background-position: center center;
+        background-size: cover;               
+        width: 40%;
+        border-top: 5px solid rgba(0,0,0,0);
+        border-left: 5px solid rgba(0,0,0,0);
+        border-right: 5px solid rgb(0, 0, 0);
+        border-bottom: 5px solid rgb(0, 0, 0);
+        border-radius: 10%;
+        
+        
+       
+    }
+    #register{
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;        
+        width: 100%;
+        padding: 20px;
+    }
+    .form div{
+        display: flex;
+       align-items: center;
+       justify-content: space-between;
+        width: 100%;
+    }
+   
+h2{
+    font-size:0.7em;
+    margin-right: 10px;
+    
+
+}
+    .input{
+        text-align: center;
+        margin: 10px 10px;
+        width: 30%;
+        border-radius: 15px;
+        outline: none;
+        font-weight: 600;
+        font-size: 15px;
+        
+        
+    }
+    label{
+       margin-bottom: 0;
+      font-size: 1.2em;
+
+    }
+    #rigaPassword2{
+        display: flex;
+        justify-content: flex-start;
+    }
+        
+    .errato{
+        border: 3px solid rgb(255, 5, 5);   
+          
+    }
+    .errato::placeholder{
+        color: red;
+    }
+    .giusto{
+        border: 5px solid rgb(3, 95, 7);  
+    }
+    .giusto::placeholder{
+        color: green;
+    }
+
+  
+
+
+form button{
+    outline: 0;
+    width: 10em;
+    font-size: 25px;
+    padding: 10px;
+    color: white;
+    background-color: rgb(60, 62, 65);
+    font-weight: 600;
+    margin: 10px auto;
+    border-radius: 15px;
+    border-top: 5px solid rgba(0,0,0,0);
+    border-left: 5px solid rgba(0,0,0,0);
+    border-right: 5px solid rgb(0, 0, 0);
+    border-bottom: 5px solid rgb(0, 0, 0);
+}
+
+#loginLink{
+    font-size: 1.1em;
+    margin-left: 0.3em;
+    align-self: center;
+    margin-bottom: 0.5em;
+
+}
+#error{
+    background-color: aliceblue;    
+    border-radius: 15px;
+    font-size: 20px;
+    color: red;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+}
+
+/* ############################IMPOSTAZIONI SCHERMO################àà*/
+@media screen and (max-width:2000px){
+    .accesso{
+        width: 50%;
+    }
+}
+@media screen and (max-width:1300px){
+    .accesso{
+        width: 60%;
+    }
+} 
+@media screen and (max-width:1000px){
+    .accesso{
+        width: 80%;
+    }
+} 
+@media screen and (max-width:780px){
+   
+    .accesso{
+        width: 90%;
+     }
+     .accesso{
+        flex-direction: row;
+    }
+     .form div{
+         flex-direction: row;
+     }
+     .input{
+         width: 60%;
+     }
+     label{
+         font-size: 15px;
+     }
+}
+
+@media screen and (max-width:500px){
+   
+    .accesso{
+        width: 90%;
+     }
+     .accesso{
+        flex-direction: column;
+    }
+     .form div{
+         flex-direction: column;
+     }
+     .input{
+         width: 100%;
+     }
+}

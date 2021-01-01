@@ -1,0 +1,38 @@
+<%-include( "../Templates/header" )%>
+    <link rel="stylesheet" href="Styles/login.css">
+    <title>Login</title>
+    </head>
+
+    <body>
+        <%-include( "../Templates/flash" )%>
+            <div class="accesso">
+                <form action="/login" method="POST" class="form">
+                    <h1>Accedi</h1>
+
+                    <div>
+                        <label for="username"></label>
+                        <input type="text" name="username" id="username" required placeholder="username"
+                            class="input"></input>
+                    </div>
+                    <div>
+                        <label for="password"></label>
+                        <input type="password" name="password" id="password" placeholder="Password" class="input"
+                            required></input>
+                    </div>
+                    <div>
+                        <button>LOGIN</button>
+                    </div>
+                    <div>
+                        <a href="">Password dimenticata?</a>
+
+                    </div>
+
+                    <div>
+                        <h2>Non hai ancora un account?</h2> <a href="/register"> Registarti!</a>
+                    </div>
+                </form>
+            </div>
+
+    </body>
+
+    </html>

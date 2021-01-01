@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="/Styles/flash.css">
+<% const successMessage=success; const errorMessage=error %>
+    <% const messaggio=successMessage.concat(errorMessage); %>
+        <% let tipo="" ; %>
+            <% successMessage.length ? tipo="success" : tipo="danger" %>
+                <% if(messaggio.length) { %>
+                    <div class="container">
+                        <div id="miaAlert" class="alert alert-<%= tipo %> <%= tipo %> alert-dismissible fade show"
+                            role="alert">
+                            <div id="messaggio"><strong>
+                                    <%= messaggio %>
+                                </strong>
+                            </div>
+                            <div id="btnClose">
+                                <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close">
+                                    x
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>

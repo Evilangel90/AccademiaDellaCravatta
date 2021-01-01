@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="../Styles/navbar.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+<div class="contenitoreNav">
+    <nav id="navBarMia">
+        <div id="logo">
+            <h2>Accademia Della Cravatta </h2>
+        </div>
+        <div id="user">
+            <% if (utente) { %>
+                <span id="nomeUtente">
+                    <%= utente%>
+                </span>
+                <% } %>
+                    <a href="#"><i class="fas fa-user" id="iconaUtente"></i></a>
+        </div>
+    </nav>
+    <div id="areaUtente" class="nascosto">
+        <div id="accedi">
+            <a class=" nav-link" href="/AreaPersonale">Area Personale</a>
+            <a class="nav-link" href="/corsi">I Miei Corsi</a>
+            <a class="nav-link" href="/corsi/shop">Shop</a>
+            <a class="nav-link" href="/assistenza">Serve Aiuto?</a>
+            <a class="nav-link" href="/logout">Esci</a>
+        </div>
+    </div>
+</div>
+
+<script src="/Scripts/navBar.js"></script>
