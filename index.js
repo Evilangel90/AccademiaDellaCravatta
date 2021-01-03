@@ -48,7 +48,7 @@ passport.deserializeUser(User.deserializeUser());
 
 const secret = process.env.secret || "questononèunbelsegreto";
 ///////////////////////////// <---CONNETTERE DATABASE-------->///////////////////////
-const dbUrl = /*process.env.DatabaseURL || */"mongodb://localhost:27017/AccademiaDellaCravatta";
+const dbUrl = process.env.DatabaseURL || "mongodb://localhost:27017/AccademiaDellaCravatta";
 //nodemon --exec babel-node index
 mongoose.connect(dbUrl, {
     useCreateIndex: true,
