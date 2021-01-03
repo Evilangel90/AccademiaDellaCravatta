@@ -48,7 +48,7 @@ passport.deserializeUser(User.deserializeUser());
 
 const secret = process.env.secret || "questononèunbelsegreto";
 ///////////////////////////// <---CONNETTERE DATABASE-------->///////////////////////
-const dbUrl = process.env.DatabaseURL || "mongodb://localhost:27017/AccademiaDellaCravatta";
+const dbUrl = /*process.env.DatabaseURL || */"mongodb://localhost:27017/AccademiaDellaCravatta";
 //nodemon --exec babel-node index
 mongoose.connect(dbUrl, {
     useCreateIndex: true,
@@ -117,8 +117,8 @@ app.get("*", (req, res) => {
     "Informazioni su cosa fa il corso ecc ecc",
     "5fdf38ce1dd6a2054c6f3956");
 */
-//creaLezione("lezione-01", "./Video/faiDaTe.mp4", "Regalo Mindset")
-//inserireLezioniNelCorso("Regalo Mindset")
+//creaLezione("lezione-02", "../Video/lupi.mp4", "Regalo Mindset")
+
 ///////////////////////////////////////////SERVER LISTEN //////////////////////////////
 app.listen(port, e => {
     console.log(`listening on Port ${port}`);

@@ -39,16 +39,8 @@ h1{
     box-shadow: 10px 7px 7px rgb(114, 110, 110);
     border:2px solid gold;
 }
-#playlist li{
-    list-style: none;    
-}
-#playlist a {
-    text-decoration: none;
-    color:white;
-}
-#playlist a:hover {
-    color: gold;
-}
+
+
 .bottoni{
     display:flex;
     flex-direction: column;
@@ -56,8 +48,11 @@ h1{
     
     
 }
-#playlist li.corrente{
+#playlist .videoLezione.corrente{
     color: gold;
+    }
+.videoLezione{
+    cursor: pointer;
 }
 .bottoni div{
     width: 100%;
