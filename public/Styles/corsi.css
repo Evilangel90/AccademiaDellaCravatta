@@ -22,44 +22,40 @@ h1{
     flex-direction: column;
     align-items: center;
 }
-.riga{
-  
+.riga{   
+ 
     display: flex;
     width: 95%;
     height:200px;
    justify-content: center;
    align-items: center;
-   margin-bottom:2em;
+   margin-bottom:5em;
 
 }
 .mensola h5{
     width:10%;
-    
+      
 }
 .mensola{   
-    
-    min-width: 90%;
-    min-height: 100%;
-    display: flex;    
-    align-items: flex-end;
-    flex-wrap: wrap;  
+    display: flex;
+       min-width: 90%;
+    height: 100%;        
     background-image: url("../Immagini/mensola.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    padding-left: 20px;
+    padding-left: 2em;
+    padding-bottom: 8em;
+    margin-top: 3.5em;
       }
 
 .libro{
-    display: flex;
+    display: flex;     
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: 8px;    
-    min-width: 106px;
-    max-width: 15%; 
-    margin-bottom: 8em;      
-    background-color: rgba(255,255,255,0.4);
+    margin-right: 0.8em;              
+   
 }
 
 .libro h6{
@@ -90,28 +86,14 @@ h1{
     }
     h5{
         font-size: 45px;
-    }
-    .mensola{
-        width: 100%;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        padding-left: 0;
-        padding-right: 0;
-       
-
-    }
+    }   
    
     .riga{
         flex-direction: column;
         width: 100%;
         min-height: 100px;
-    }
-    .libri{
-        width: 14%;
-        margin-bottom: 6vh;
-        margin-right: 0.1em;
-    }
+    }  
+    
 
 }
 @media screen and (max-width:800px)
@@ -130,19 +112,14 @@ h5{
 
 @media screen and (max-width:680px){
  h1{
-       font-size: 25px;
+       font-size: 26px;
     }
     h5{
-        font-size: 22px;
+        font-size: 24px;
     }
     .libro h6{
-        font-size: 15px;
-    }
-    .libro{
-        margin-right:1.5em;
-        width: 20%; 
-        margin-bottom: 2.2em;
-    }
+        font-size: 19px;
+    }   
    
 }
 @media screen and (max-width:350px){
@@ -160,10 +137,10 @@ h5{
      .contenitore{
         width: 100%;
     }
-   
-    .mensola{
-        margin-right: auto;
-        margin-left: auto;
-    }
+    .libro h6{
+        font-size: 15px;
+
+    }   
+    
       
    }

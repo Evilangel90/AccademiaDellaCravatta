@@ -34,6 +34,7 @@
                                                         <% for (corso of corsiObbiettivi){ %>
                                                             <%-include( "../Templates/libro" )%>
                                                                 <% } %>
+
                                                     </div>
                                             </div>
                                             <div class="riga">
@@ -42,11 +43,9 @@
                                                 </h5>
                                                 <% const corsiFinanza=filtraArray("finanza"); %>
                                                     <div class="mensola">
-                                                        <div class="libri">
-                                                            <% for (corso of corsiFinanza){ %>
-                                                                <%-include( "../Templates/libro" )%>
-                                                                    <% } %>
-                                                        </div>
+                                                        <% for (corso of corsiFinanza){ %>
+                                                            <%-include( "../Templates/libro" )%>
+                                                                <% } %>
                                                     </div>
                                             </div>
                                             <div class="riga">
@@ -55,11 +54,11 @@
                                                 </h5>
                                                 <% const corsiRistorante=filtraArray("ristorante"); %>
                                                     <div class="mensola">
-                                                        <div class="libri">
-                                                            <% for (corso of corsiRistorante){ %>
-                                                                <%-include( "../Templates/libro" )%>
-                                                                    <% } %>
-                                                        </div>
+
+                                                        <% for (corso of corsiRistorante){ %>
+                                                            <%-include( "../Templates/libro" )%>
+                                                                <% } %>
+
                                                     </div>
                                             </div>
                                             <div class="riga">
