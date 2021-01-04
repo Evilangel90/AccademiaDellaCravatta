@@ -5,12 +5,11 @@ const lessionSchema = new mongoose.Schema({
         type: String,
         //esempio: lezione-01, lezione-02 ecc
         required: true,
-        unique: true
     }, link: {
         type: String,
         //il link al video stesso
         required: true,
-        unique: true
+
     },
     appartieneCorso: {
         type: Schema.Types.ObjectId,

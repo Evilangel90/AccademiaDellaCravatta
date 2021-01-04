@@ -8,18 +8,24 @@ export const èLoggato = (req, res, next) => {
 }
 
 export const corsoValido = async (req, res, next) => {
-
-    const corsoId = req.params.id;
-    let corso = await Corso.findById(corsoId)
-    let lezioniEsistono = "";
-    corso.lezioni.length >= 1 ? lezioniEsistono = true : lezioniEsistono = false;
-
-    if (lezioniEsistono) {
-        next()
-    } else {
-        req.flash("error", "Pagina Non disponibile al momento, riprovare più tardi o contattare gli amministratori");
-        res.redirect("/corsi");
+    try {
+        const corsoId = req.params.id;
+        let corso = await Corso.findById(corsoId);
+        let lezioniEsistono = "";
+        corso.lezioni.length >= 1 ? lezioniEsistono = true : lezioniEsistono = false;
+        if (lezioniEsistono) {
+            next()
+        } else {
+            req.flash("error", "Pagina Non disponibile al momento, riprovare più tardi o contattare gli amministratori");
+            res.redirect("/corsi");
+        }
+    } catch {
+        res.redirect("/paginaErrore");
     }
 }
+
+
+
+
 
 

@@ -9,96 +9,136 @@
                 <% function filtraArray(categoria) { const array=[]; %>
                     <% for (corso of corsi) { if (corso.categoria===categoria) { %>
                         <% array.push(corso); } } return array} %>
-
                             <div class="contenitore">
                                 <h1> I tuoi corsi </h1>
                                 <div class="riga">
-                                    <h5>
-                                        Mindset
-                                    </h5>
                                     <% const corsiMindset=filtraArray("mindset"); %>
-                                        <div class="mensola">
-                                            <div class="libri">
+                                        <% if(corsiMindset.length>=1){ %>
+                                            <h5>
+                                                Mindset
+                                            </h5>
+                                            <div class="mensola">
+
                                                 <% for (corso of corsiMindset){ %>
-                                                    <a href="<%=corso._id%>/videoLezione"><img
-                                                            src="<%=corso.immagine  %>" alt=""></a>
+                                                    <div class="libro">
+                                                        <h6>
+                                                            <%=corso.titolo %>
+                                                        </h6>
+                                                        <a href="<%=corso._id%>/videoLezione"><img
+                                                                src="<%=corso.immagine  %>" alt=""></a>
+                                                    </div>
                                                     <% } %>
+
                                             </div>
-                                        </div>
+                                            <% } %>
                                 </div>
                                 <div class="riga">
-                                    <h5>
-                                        Obbiettivi
-                                    </h5>
                                     <% const corsiObbiettivi=filtraArray("obbiettivi"); %>
-                                        <div class="mensola">
-                                            <div class="libri">
+                                        <% if(corsiObbiettivi.length>=1){ %>
+                                            <h5>
+                                                Obbiettivi
+                                            </h5>
+                                            <div class="mensola">
+
                                                 <% for (corso of corsiObbiettivi){ %>
-                                                    <a href="<%=corso._id%>/videoLezione"><img
-                                                            src="<%=corso.immagine  %>" alt=""></a>
+                                                    <div class="libro">
+                                                        <h6>
+                                                            <%=corso.titolo %>
+                                                        </h6>
+                                                        <a href="<%=corso._id%>/videoLezione"><img
+                                                                src="<%=corso.immagine  %>" alt=""></a>
+                                                    </div>
                                                     <% } %>
+
                                             </div>
-                                        </div>
+                                            <% } %>
                                 </div>
                                 <div class="riga">
-                                    <h5>
-                                        Finanza
-                                    </h5>
                                     <% const corsiFinanza=filtraArray("finanza"); %>
-                                        <div class="mensola">
-                                            <div class="libri">
+                                        <% if(corsiFinanza.length>=1){ %>
+                                            <h5>
+                                                Finanza
+                                            </h5>
+                                            <div class="mensola">
+                                                <h6>
+                                                    <%=corso.titolo %>
+                                                </h6>
+
                                                 <% for (corso of corsiFinanza){ %>
-                                                    <a href="<%=corso._id%>/videoLezione"><img
-                                                            src="<%=corso.immagine  %>" alt=""></a>
+                                                    <div class="libro">
+                                                        <a href="<%=corso._id%>/videoLezione"><img
+                                                                src="<%=corso.immagine  %>" alt=""></a>
+                                                    </div>
                                                     <% } %>
+
                                             </div>
-                                        </div>
+                                            <% } %>
                                 </div>
                                 <div class="riga">
-                                    <h5>
-                                        Ristorante
-                                    </h5>
                                     <% const corsiRistorante=filtraArray("ristorante"); %>
-                                        <div class="mensola">
-                                            <div class="libri">
+                                        <% if(corsiRistorante.length>=1){ %>
+                                            <h5>
+                                                Ristorante
+                                            </h5>
+                                            <div class="mensola">
+
                                                 <% for (corso of corsiRistorante){ %>
-                                                    <a href="<%=corso._id%>/videoLezione"><img
-                                                            src="<%=corso.immagine  %>" alt=""></a>
+                                                    <div class="libro">
+                                                        <h6>
+                                                            <%=corso.titolo %>
+                                                        </h6>
+                                                        <a href="<%=corso._id%>/videoLezione"><img
+                                                                src="<%=corso.immagine  %>" alt=""></a>
+                                                    </div>
                                                     <% } %>
+
                                             </div>
-                                        </div>
+                                            <% } %>
                                 </div>
                                 <div class="riga">
-                                    <h5>
-                                        Marketing
-                                    </h5>
                                     <% const corsiMarketing=filtraArray("marketing"); %>
-                                        <div class="mensola">
-                                            <div class="libri">
+                                        <% if(corsiMarketing.length>=1){ %>
+                                            <h5>
+                                                Marketing
+                                            </h5>
+                                            <div class="mensola">
+
                                                 <% for (corso of corsiMarketing){ %>
-                                                    <a href="<%=corso._id%>/videoLezione"><img
-                                                            src="<%=corso.immagine  %>" alt=""></a>
+                                                    <div class="libro">
+                                                        <h6>
+                                                            <%=corso.titolo %>
+                                                        </h6>
+                                                        <a href="<%=corso._id%>/videoLezione"><img
+                                                                src="<%=corso.immagine  %>" alt=""></a>
+                                                    </div>
                                                     <% } %>
+
                                             </div>
-                                        </div>
+                                            <% } %>
                                 </div>
                                 <div class="riga">
-                                    <h5>
-                                        Servizio
-                                    </h5>
                                     <% const corsiServizio=filtraArray("servizio"); %>
-                                        <div class="mensola">
-                                            <div class="libri">
+                                        <% if(corsiServizio.length>=1){ %>
+                                            <h5>
+                                                Servizio
+                                            </h5>
+                                            <div class="mensola">
+
                                                 <% for (corso of corsiServizio){ %>
-                                                    <a href="<%=corso._id%>/videoLezione"><img
-                                                            src="<%=corso.immagine  %>" alt=""></a>
+                                                    <div class="libro">
+                                                        <h6>
+                                                            <%=corso.titolo %>
+                                                        </h6>
+                                                        <a href="<%=corso._id%>/videoLezione"><img
+                                                                src="<%=corso.immagine  %>" alt=""></a>
+                                                        <div class="libro">
+                                                            <% } %>
+                                                        </div>
+                                                        iv>
+                                                    </div>
+
                                                     <% } %>
                                             </div>
-                                        </div>
-                                </div>
-
-
-                            </div>
 
     </body>
 

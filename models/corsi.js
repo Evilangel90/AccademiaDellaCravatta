@@ -17,10 +17,10 @@ const CorsoSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    utentePuoVedere: {
+    utentePuoVedere: [{
         type: Schema.Types.ObjectId,
         ref: "User"
-    },
+    }],
     lezioni: [{
         type: Schema.Types.ObjectId,
         ref: "Lezione"

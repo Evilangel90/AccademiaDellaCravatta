@@ -70,6 +70,7 @@ const store = new MongoDBStore({
 //////////////////////SETTAGGI SESSIONI UTENTE ///////////
 
 import session from "express-session";
+import { Corso } from "./models/corsi.js";
 
 
 const sessionOptions = {
@@ -94,10 +95,12 @@ app.use((req, res, next) => {
     next();
 });
 /////////////////////////////////// CONFIGURAZIONE PAYPAL//////////
+let mode = "sandbox";
+process.env.NODE_ENV !== "production" ? mode = "sandbox" : mode = "live";
 paypal.configure({
-    'mode': 'sandbox', //sandbox or live
-    'client_id': 'AT_O-TUMOTL9UkKJG_3x-tKwjF6zywrMVhb0KCelCq83W-frhfSMawjmjVsB2Ba0_B3nI6BgK5lpY8Ah',
-    'client_secret': 'EEDJ4-dmS2AVN1ud14GZruQ5Kdk35tk-x4i_XZiqgI2pEP6_6uwHRBPGRVVQOHbwG8XJknB_6xG6E5sN'
+    'mode': mode, //sandbox or live
+    'client_id': process.env.paypalClientID,
+    'client_secret': process.env.paypalSecret
 });
 ///////////////////////////// <--- ROUTES-------->///////////////////////
 app.get("/", (req, res) => {
@@ -109,15 +112,16 @@ app.use("/", paypalRoutes);
 
 ///////tutte possibili routes
 app.get("*", (req, res) => {
-    res.send("pagina non trovata");
+    res.render("paginaErrore");
 });
 /////////////////////////// ATTIVO FUNZIONI PER CREARE CORSI ///////////////////
-/*creaCorso("Regalo Mindset", 0, 1, "mindset",
+/*creaCorso("Corso Obbiettivi 1", 150, 1, "obbiettivi",
     "https://immagini.disegnidacolorareonline.com/cache/data/disegni-colorati/scuola/disegno-libri-scolastici-colorato-600x600.jpg",
-    "Informazioni su cosa fa il corso ecc ecc",
-    "5fdf38ce1dd6a2054c6f3956");
+    "Informazioni su cosa fa il corso ecc ecc");
 */
-//creaLezione("lezione-02", "../Video/lupi.mp4", "Regalo Mindset")
+//creaLezione("lezione-01", "../Video/lupi.mp4", "Corso Obbiettivi 1")
+//creaLezione("lezione-02", "../Video/faiDaTe.mp4", "Corso Obbiettivi 1")
+//
 
 ///////////////////////////////////////////SERVER LISTEN //////////////////////////////
 app.listen(port, e => {

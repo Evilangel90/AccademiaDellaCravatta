@@ -1,0 +1,14 @@
+<div class=" libro">
+    <h6>
+        <%=corso.titolo %>
+    </h6>
+    <%if(corso.utentePuoVedere.includes(utente._id)){ %>
+        <a href="/<%=corso._id%>/videoLezione">
+            <img src="../Immagini/corsoComprato.png" alt="Hai gia Questo Corso">
+        </a>
+        <% } else {%>
+            <a href="<%=corso._id%>">
+                <img src="<%=corso.immagine%>" alt="">
+                <% } %>
+            </a>
+</div>

@@ -1,17 +1,16 @@
 import { Corso } from "./models/corsi";
 import { Lesson } from "./models/lezioni"
 
-export const creaCorso = async (titolo, prezzo, ordine, categoria, immagineUrl, info, utentePuoVedere) => {
+export const creaCorso = async (titolo, prezzo, ordine, categoria, immagineUrl, info) => {
     try {
-        const corso = { titolo, prezzo, ordine, categoria, immagineUrl, info, utentePuoVedere }
+        const corso = { titolo, prezzo, ordine, categoria, immagineUrl, info }
         const newCorso = new Corso({
             titolo: corso.titolo,
             prezzo: corso.prezzo,
             ordine: corso.ordine,
             categoria: corso.categoria,
             immagine: corso.immagineUrl,
-            info: corso.info,
-            utentePuoVedere: corso.utentePuoVedere
+            info: corso.info
 
         });
         newCorso.save();

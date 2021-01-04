@@ -6,101 +6,85 @@
     <body>
         <%-include( "../Templates/navbar" )%>
             <%-include( "../Templates/flash" )%>
-
                 <% function filtraArray(categoria) { const array=[]; %>
                     <% for (corso of corsi) { if (corso.categoria===categoria) { %>
                         <% array.push(corso); } } return array} %>
-
-                            <div class="contenitore">
-                                <h1> Negozio </h1>
-                                <div class="riga">
-                                    <h5>
-                                        Mindset
-                                    </h5>
-                                    <% const corsiMindset=filtraArray("mindset"); %>
-                                        <div class="mensola">
-                                            <div class="libri">
-                                                <% for (corso of corsiMindset){ %>
-                                                    <a href="<%=corso._id%>"><img src="<%=corso.immagine  %>"
-                                                            alt=""></a>
-                                                    <% } %>
+                            <% const tuttiCorsi=[];%>
+                                <% for (corso of corsi) { %>
+                                    <% tuttiCorsi.push(corso)} %>
+                                        <div class=" contenitore">
+                                            <h1> Corsi aquistabili per categoria </h1>
+                                            <div class="riga">
+                                                <h5>
+                                                    Mindset
+                                                </h5>
+                                                <% const corsiMindset=filtraArray("mindset"); %>
+                                                    <div class="mensola">
+                                                        <% for (corso of corsiMindset){ %>
+                                                            <%-include( "../Templates/libro" )%>
+                                                                <% } %>
+                                                    </div>
+                                            </div>
+                                            <div class="riga">
+                                                <h5>
+                                                    Obbiettivi
+                                                </h5>
+                                                <% const corsiObbiettivi=filtraArray("obbiettivi"); %>
+                                                    <div class="mensola">
+                                                        <% for (corso of corsiObbiettivi){ %>
+                                                            <%-include( "../Templates/libro" )%>
+                                                                <% } %>
+                                                    </div>
+                                            </div>
+                                            <div class="riga">
+                                                <h5>
+                                                    Finanza
+                                                </h5>
+                                                <% const corsiFinanza=filtraArray("finanza"); %>
+                                                    <div class="mensola">
+                                                        <div class="libri">
+                                                            <% for (corso of corsiFinanza){ %>
+                                                                <%-include( "../Templates/libro" )%>
+                                                                    <% } %>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div class="riga">
+                                                <h5>
+                                                    Ristorante
+                                                </h5>
+                                                <% const corsiRistorante=filtraArray("ristorante"); %>
+                                                    <div class="mensola">
+                                                        <div class="libri">
+                                                            <% for (corso of corsiRistorante){ %>
+                                                                <%-include( "../Templates/libro" )%>
+                                                                    <% } %>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <div class="riga">
+                                                <h5>
+                                                    Marketing
+                                                </h5>
+                                                <% const corsiMarketing=filtraArray("marketing"); %>
+                                                    <div class="mensola">
+                                                        <% for (corso of corsiMarketing){ %>
+                                                            <%-include( "../Templates/libro" )%>
+                                                                <% } %>
+                                                    </div>
+                                            </div>
+                                            <div class="riga">
+                                                <h5>
+                                                    Servizio
+                                                </h5>
+                                                <% const corsiServizio=filtraArray("servizio"); %>
+                                                    <div class="mensola">
+                                                        <% for (corso of corsiServizio){ %>
+                                                            <%-include( "../Templates/libro" )%>
+                                                                <% } %>
+                                                    </div>
                                             </div>
                                         </div>
-                                </div>
-                                <div class="riga">
-                                    <h5>
-                                        Obbiettivi
-                                    </h5>
-                                    <% const corsiObbiettivi=filtraArray("obbiettivi"); %>
-                                        <div class="mensola">
-                                            <div class="libri">
-                                                <% for (corso of corsiObbiettivi){ %>
-                                                    <a href="<%=corso._id%>"><img src="<%=corso.immagine  %>"
-                                                            alt=""></a>
-                                                    <% } %>
-                                            </div>
-                                        </div>
-                                </div>
-                                <div class="riga">
-                                    <h5>
-                                        Finanza
-                                    </h5>
-                                    <% const corsiFinanza=filtraArray("finanza"); %>
-                                        <div class="mensola">
-                                            <div class="libri">
-                                                <% for (corso of corsiFinanza){ %>
-                                                    <a href="<%=corso._id%>"><img src="<%=corso.immagine  %>"
-                                                            alt=""></a>
-                                                    <% } %>
-                                            </div>
-                                        </div>
-                                </div>
-                                <div class="riga">
-                                    <h5>
-                                        Ristorante
-                                    </h5>
-                                    <% const corsiRistorante=filtraArray("ristorante"); %>
-                                        <div class="mensola">
-                                            <div class="libri">
-                                                <% for (corso of corsiRistorante){ %>
-                                                    <a href="<%=corso._id%>"><img src="<%=corso.immagine  %>"
-                                                            alt=""></a>
-                                                    <% } %>
-                                            </div>
-                                        </div>
-                                </div>
-                                <div class="riga">
-                                    <h5>
-                                        Marketing
-                                    </h5>
-                                    <% const corsiMarketing=filtraArray("marketing"); %>
-                                        <div class="mensola">
-                                            <div class="libri">
-                                                <% for (corso of corsiMarketing){ %>
-                                                    <a href="<%=corso._id%>"><img src="<%=corso.immagine  %>"
-                                                            alt=""></a>
-                                                    <% } %>
-                                            </div>
-                                        </div>
-                                </div>
-                                <div class="riga">
-                                    <h5>
-                                        Servizio
-                                    </h5>
-                                    <% const corsiServizio=filtraArray("servizio"); %>
-                                        <div class="mensola">
-                                            <div class="libri">
-                                                <% for (corso of corsiServizio){ %>
-                                                    <a href="<%=corso._id%>"><img src="<%=corso.immagine  %>"
-                                                            alt=""></a>
-                                                    <% } %>
-                                            </div>
-                                        </div>
-                                </div>
-
-
-                            </div>
-
     </body>
 
     </html>

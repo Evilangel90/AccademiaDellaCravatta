@@ -10,6 +10,7 @@ router.get("/login", (req, res) => {
     res.render("login");
 });
 router.post("/login", passport.authenticate("local", AuthImpost), async (req, res) => {
+
     try {
         const { username } = req.body;
         const utente = await User.findOne({ username });
@@ -54,12 +55,12 @@ router.post("/register", async (req, res) => {
     }
 });
 router.get("/areaPersonale", èLoggato, (req, res) => {
-    const utente = req.user.nome;
+    const utente = req.user;
     res.render("areaPersonale", { utente });
 });
 
 router.get("/assistenza", èLoggato, (req, res) => {
-    const utente = req.user.nome;
+    const utente = req.user;
     res.render("assistenza", { utente });
 });
 

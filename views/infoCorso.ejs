@@ -11,23 +11,30 @@
                         <%=corso.titolo %>
                     </h1>
 
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 14rem;">
                         <img src="<%=corso.immagine %> " class="card-img-top" alt="">
                         <div class="card-body">
                             <h5 class="card-title">
                                 <%=corso.titolo %>
                             </h5>
-                            <p style="color: black;" class="card-text">
+                            <p style="color: black; font-size: 18px;" class="card-text">
                                 Spiegazione di che viene detto nel corso ecc ecc ecc
                                 <%=corso.info %>
                             </p>
+                            <h6>
+                                Costo: <%=corso.prezzo%>€
+                            </h6>
                             <form action="/pay" method="post">
-                                <input type="submit" value="Buy">
+                                <button id="bottonePaypal">
+                                    Compra
+                                </button>
+
                             </form>
 
                         </div>
                     </div>
+                    <h6><a href="/corsi/shop">Torna ai corsi Acquistabili</a></h6>
                 </div>
-                <h6><a href="/corsi/shop">Torna ai corsi Acquistabili</a></h6>
+
                 </div>
     </body>

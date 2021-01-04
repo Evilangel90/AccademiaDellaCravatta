@@ -27,18 +27,35 @@ h5{
     display: flex;
     justify-content: center;
 }
-#bottonePaypal div{
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    
-}
-#bottonePaypal div a{
-    width: 100%;
-}
+
 .card{
     margin-bottom: 1em;
+};
+.card-text{
+    font-size: 18px;
+}
+a{
+    color: gold;
+    margin-bottom: 20px;
 }
 a:hover{
     text-decoration: none;
+}
+.card button{
+    color: white;
+    background-color: rgb(80, 76, 76);
+    border: 1px solid gold;
+    border-radius: 15px;
+}
+.card button:hover{
+    color: gold;
+   
+}
+@media screen and (max-width:450px){
+    h1{
+        font-size: 28px;
+    }
+    a{
+        font-size: 20px;
+    }
 }
