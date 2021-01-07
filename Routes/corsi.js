@@ -2,7 +2,7 @@ import express from "express";
 const router = express.Router();
 import { Corso } from "../models/corsi";
 import { èLoggato, corsoValido } from "../public/Scripts/middleware";
-import { Lesson } from "../models/lezioni"
+import { Lesson } from "../models/lezioni";
 
 router.get("/corsi", èLoggato, async (req, res) => {
     const utente = req.user;

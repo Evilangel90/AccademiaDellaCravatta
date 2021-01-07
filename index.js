@@ -8,6 +8,7 @@ import path from "path";
 import usersRoutes from "./Routes/users.js";
 import corsiRoutes from "./Routes/corsi.js";
 import paypalRoutes from "./Routes/paypal.js";
+import assistenzaRoutes from "./Routes/email.js"
 import ejsMate from "ejs-mate";
 import methodOverride from "method-override";
 const port = process.env.PORT || 3000;
@@ -48,7 +49,7 @@ passport.deserializeUser(User.deserializeUser());
 
 const secret = process.env.secret || "questononèunbelsegreto";
 ///////////////////////////// <---CONNETTERE DATABASE-------->///////////////////////
-const dbUrl = process.env.DatabaseURL || "mongodb://localhost:27017/AccademiaDellaCravatta";
+const dbUrl = /*process.env.DatabaseURL || */"mongodb://localhost:27017/AccademiaDellaCravatta";
 //nodemon --exec babel-node index
 mongoose.connect(dbUrl, {
     useCreateIndex: true,
@@ -70,7 +71,7 @@ const store = new MongoDBStore({
 //////////////////////SETTAGGI SESSIONI UTENTE ///////////
 
 import session from "express-session";
-import { Corso } from "./models/corsi.js";
+
 
 
 const sessionOptions = {
@@ -109,6 +110,7 @@ app.get("/", (req, res) => {
 app.use("/", usersRoutes);
 app.use("/", corsiRoutes);
 app.use("/", paypalRoutes);
+app.use("/", assistenzaRoutes);
 
 ///////tutte possibili routes
 app.get("*", (req, res) => {

@@ -15,7 +15,7 @@ router.post("/login", passport.authenticate("local", AuthImpost), async (req, re
         const { username } = req.body;
         const utente = await User.findOne({ username });
         req.flash("success", ` Bentornato ${utente.nome}`);
-        res.redirect("areaPersonale");
+        res.redirect("/areaPersonale");
     } catch (e) {
         res.render("login", { messaggio: req.flash("error") });
     }
@@ -57,11 +57,6 @@ router.post("/register", async (req, res) => {
 router.get("/areaPersonale", èLoggato, (req, res) => {
     const utente = req.user;
     res.render("areaPersonale", { utente });
-});
-
-router.get("/assistenza", èLoggato, (req, res) => {
-    const utente = req.user;
-    res.render("assistenza", { utente });
 });
 
 router.get("/logout", (req, res) => {
