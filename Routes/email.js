@@ -1,13 +1,16 @@
+if (process.env.NODE_ENV !== "production") {
+    require("dotenv").config();
+}
 import express from "express";
 const router = express.Router();
 import { èLoggato } from "../public/Scripts/middleware";
 import nodemailer from "nodemailer";
 
-
-
+const emailMittente = process.env.emailMittente;
+const passwEmail = process.env.emailPassw;
+const emailDestinataria = process.env.emailDestinataria
 
 //////////////////////////ROUTES////////////////
-
 
 router.get("/assistenza", èLoggato, (req, res) => {
     const utente = req.user;
@@ -36,8 +39,8 @@ router.post("/assistenza", èLoggato, (req, res,) => {
         port: 465,
         secure: true, // true for 465, false for other ports
         auth: {
-            user: 'accademiacravatta@libero.it', // generated ethereal user
-            pass: 'Aldo2020!'  // generated ethereal password
+            user: emailMittente, // generated ethereal user
+            pass: passwEmail  // generated ethereal password
         },
         tls: {
             rejectUnauthorized: false
@@ -46,8 +49,8 @@ router.post("/assistenza", èLoggato, (req, res,) => {
 
     // setup email data with unicode symbols
     let mailOptions = {
-        from: '"Assistenza Accademia Della Cravatta" <accademiacravatta@libero.it>', // sender address
-        to: 'mauro_deg90@hotmail.it', // list of receivers
+        from: `"Assistenza Accademia Della Cravatta" <${emailMittente}>`, // sender address
+        to: emailDestinataria, // list of receivers
         subject: `Un utente ha un problema riguardante ${req.body.problema}`, // Subject line
         text: 'Hello world?', // plain text body
         html: corpoEmail // html body
