@@ -1,0 +1,159 @@
+body{
+    background-image: url("../Immagini/sfondoMattoni.png");
+    background-size: cover;
+    color: white;
+    line-height: 1em;
+    width: 100%;
+    height: 100%;
+   
+}
+.contenitore{
+  
+    margin-top: 6em;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../Immagini/sfondoFormRegistrazione.png");
+    background-size: cover;
+}
+form{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    padding: 20px;
+}
+form div{
+   
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       width: 50%;
+}
+input{
+    text-align: center;
+    margin: 10px 0;
+    width: 50%;
+    border-radius: 15px;
+    outline: 0;
+    font-weight: 600;
+    
+}
+h2{
+    font-size:0.7em;
+    margin-right: 18px;
+}
+a{
+    color: gold;
+    font-size: 18px;
+}
+a:hover{
+    color: red;
+    text-decoration: none;
+}
+.linkRegistrati{
+    display: flex;
+    justify-content: center;
+}
+
+label{
+    font-weight: 600;
+}
+h1{
+    color: gold;
+    text-align: center;
+}
+button{
+outline: 0;
+width: 10em;
+font-size: 25px;
+padding: 10px;
+color: white;
+background-color: rgb(60, 62, 65);
+font-weight: 600;
+margin: 10px auto;
+border-radius: 15px;
+border-top: 5px solid rgba(0,0,0,0);
+border-left: 5px solid rgba(0,0,0,0);
+border-right: 5px solid rgb(0, 0, 0);
+border-bottom: 5px solid rgb(0, 0, 0);
+}
+button:hover,button:focus{
+    outline: 0;
+    color: gold;
+}
+
+/* ############################IMPOSTAZIONI SCHERMO################àà*/
+
+@media screen and (max-width:4000px){
+    h1{
+        font-size: 35px;
+    }
+    h2{
+        font-size: 28px;
+    }
+    .contenitore{
+        margin-top: 5em;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    form{
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    form div{
+        width: 100%;
+        }
+}
+#error{
+    background-color: aliceblue;    
+    border-radius: 15px;
+    font-size: 20px;
+    color: red;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+}
+
+    @media screen and (max-width:1000px){
+ .contenitore{
+            margin-top: 2em;
+            width: 100%;
+        }
+  
+    form div{
+    width: 100%;
+    }
+    h1{
+        font-size: 24px;
+    }
+
+    h2{
+        font-size: 22px;
+    }
+
+ }
+ 
+    @media screen and (max-width:800px){
+    form{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+   
+}
+    @media screen and (max-width:500px){
+h1{
+    font-size: 20px;
+}
+    
+    form{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+ }

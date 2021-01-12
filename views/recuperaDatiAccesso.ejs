@@ -1,0 +1,19 @@
+<%-include( "../Templates/header" )%>
+    <link rel="stylesheet" href="Styles/altraRichiestaEmail.css">
+    <title>Recupera Dati</title>
+    </head>
+
+    <body>
+        <%-include( "../Templates/flash" )%>
+            <div class="contenitore">
+                <h5> Usa questo form per ripristinare il tuo account</h5>
+                <form action="/recuperaDatiAccesso" method="POST">
+                    <label for="email">inserisci l'email con il quale ti sei registrato</label>
+                    <input type="Email" id="email" name="emailUtente" placeholder="email" required>
+                    <button>Ricevi Email</button>
+                    <div class="linkRegistrati">
+                        <h2>Non hai ancora un account?</h2> <a href="/register"> Registarti!</a>
+                    </div>
+                </form>
+            </div>
+    </body>

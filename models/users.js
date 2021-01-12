@@ -35,35 +35,25 @@ const UserSchema = new mongoose.Schema({
     cellulare: {
         type: Number,
         required: true,
-        unique: true
+        unique: [true, "Cellulare già registrato"]
     },
     email: {
         type: String,
         required: true,
-        unique: true
+        unique: [true, "l'email è già registrata"]
     },
-    corsiDisponibili: {
+    corsiDisponibili: [{
         type: Schema.Types.ObjectId,
         ref: "Corso"
+    }],
+    confermatoEmail: {
+        type: Boolean,
+        default: false
     }
 
 
 
 });
-//rendere Unica l email
-UserSchema.path("email").validate(async (email) => {
-    let dbEmail = await mongoose.models.User.countDocuments({ email });
-    return !dbEmail;
-
-}, "l'email è già registrata");
-
-//rendere unico cellulare
-UserSchema.path("cellulare").validate(async (cellulare) => {
-    let dbCell = await mongoose.models.User.countDocuments({ cellulare });
-    return !dbCell;
-
-}, "Il numero di cellulare risulta già registrato");
-
 
 UserSchema.plugin(passportLocalMangoose);
 export const User = mongoose.model("User", UserSchema);

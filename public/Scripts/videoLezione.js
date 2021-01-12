@@ -171,3 +171,5 @@ function utentePremeTastoDestro(evento) {
 
 
 
+///////////////////////////////////////BLOCCARE PAGINA SE ATTIVO VIDEO DOWNLOAD///////////////////////
+

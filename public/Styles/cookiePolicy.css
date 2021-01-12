@@ -1,0 +1,23 @@
+
+#popupConsenso {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 8rem;
+    background-color: #fff;
+    transition: display 1s ease;
+    
+}
+.nascosto{
+   display: none;
+}
+
+#btnAccetta{
+    color: #fff;
+   padding: 0.2em 0.6em;
+    background-color: #000;
+    border: 0;
+    outline: 0;
+    border-radius: 25px;
+}
