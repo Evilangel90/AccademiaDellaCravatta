@@ -138,10 +138,12 @@ router.get("/confermaEmail/:id", (req, res) => {
                     res.redirect("/altraEmailConvalida");
                 } else {
                     const { emailUtente } = decodedToken;
-                    res.send(" aiutoooooooooooooo");
-                    //await User.findOneAndUpdate({ email: emailUtente, confermatoEmail: true });
-                    //req.flash("success", "Account verificato correttamente ora puoi effettuare il login");
-                    //res.redirect("/login");
+                    await User.updateOne(
+                        { email: emailUtente },
+                        { $set: { confermatoEmail: true } },
+                        { upsert: false });
+                    req.flash("success", "Account verificato correttamente ora puoi effettuare il login");
+                    res.redirect("/login");
                 }
             });
         } else {
